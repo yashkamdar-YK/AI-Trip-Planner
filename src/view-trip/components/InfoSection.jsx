@@ -1,46 +1,47 @@
 import { Button } from "@/components/ui/button";
-import React, { useEffect } from "react";
+import React from "react";
 import { IoIosSend } from "react-icons/io";
-// import { GetPlaceDetail } from "@/services/GlobleApi";
+
 const InfoSection = ({ trip }) => {
-
-  // useEffect(()=>{
-  //   trip&&GetPlaceImage()
-  // },[trip])
-
-  // const GetPlaceImage = async()=>{
-  //   const data = {
-  //     textQuery:trip?.userSelection?.location
-  //   }
-  //   const result = await GetPlaceDetail().then((resp)=>console.log(resp.data))
-  //   console.log("DAta Place",result);
-    
-  // }
   return (
-    <div className="w-full">
-      <figure>
-        <img
-          src="/goku-dragon-ball-guru.jpg"
-          className="h-[300px] w-full rounded-xl object-cover"
-          alt="Main Image"
-        />
-      </figure>
-      <div className="flex justify-between items-center">
-      <div className="flex text-start flex-col gap-2 my-5">
-        <h2 className="font-bold text-xl">{trip?.userSelection?.location}</h2>
-        <div className="gap-2 flex mt-3">
-          <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-base">
-          📅{trip?.userSelection?.days} Days
-          </h2>
-          <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-base">
-          💰Trip Budget {trip?.userSelection?.budget}
-          </h2>
-          <h2 className="p-1 px-3 bg-gray-200 rounded-full text-gray-500 text-xs md:text-base">
-          👨No. Of Traveler {trip?.userSelection?.traveler}
-          </h2>
+    <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="space-y-4 sm:space-y-6">
+        {/* Image Container */}
+        <figure className="w-full aspect-[16/9] sm:aspect-[2/1] md:aspect-[21/9] relative overflow-hidden rounded-xl">
+          <img
+            src="/goku-dragon-ball-guru.jpg"
+            className="w-full h-full object-cover absolute inset-0"
+            alt="Main Image"
+          />
+        </figure>
+
+        {/* Info Container */}
+        <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-4">
+          <div className="space-y-3 w-full sm:w-auto">
+            {/* Location */}
+            <h2 className="font-bold text-lg sm:text-xl lg:text-2xl truncate">
+              {trip?.userSelection?.location}
+            </h2>
+
+            {/* Tags Container */}
+            <div className="flex flex-wrap gap-2">
+              <span className="inline-flex items-center px-3 py-1 bg-gray-200 rounded-full text-gray-500 text-xs sm:text-sm">
+                📅 {trip?.userSelection?.days} Days
+              </span>
+              <span className="inline-flex items-center px-3 py-1 bg-gray-200 rounded-full text-gray-500 text-xs sm:text-sm">
+                💰 Trip Budget {trip?.userSelection?.budget}
+              </span>
+              <span className="inline-flex items-center px-3 py-1 bg-gray-200 rounded-full text-gray-500 text-xs sm:text-sm">
+                👨 No. Of Traveler {trip?.userSelection?.traveler}
+              </span>
+            </div>
+          </div>
+
+          {/* Send Button */}
+          <Button className="self-end sm:self-center">
+            <IoIosSend className="w-5 h-5" />
+          </Button>
         </div>
-      </div>
-      <Button><IoIosSend /></Button>
       </div>
     </div>
   );
