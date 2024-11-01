@@ -30,4 +30,11 @@ An AI-powered trip planning application that helps users create personalized tra
 1. **Clone the Repository**:
    ```bash
    git clone https://github.com/your-username/ai-trip-planner.git
+   
+2. **Clone the Repository**:
+   ```bash  
    cd ai-trip-planner
+
+3. **Clone the Repository**:
+   ```bash  
+   npm run dev     
