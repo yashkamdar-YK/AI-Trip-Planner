@@ -37,4 +37,33 @@ An AI-powered trip planning application that helps users create personalized tra
 
 3. **Clone the Repository**:
    ```bash  
-   npm run dev     
+   npm run dev
+
+## 💡 Usage
+
+- **Enter Trip Details:** Input your destination, number of days, budget, and travel companion type.
+- **Generate Trip:** Click the button to let Google Gemini AI create a customized trip plan.
+- **View Results:** Review your itinerary and view images from Firebase.
+ 
+ 
+## 📷 Screenshots 
+
+![Screenshot 2024-11-02 012642](https://github.com/user-attachments/assets/5b2ba6a6-31f8-4383-8a31-24c9082b852a) 
+
+![Screenshot 2024-11-02 012718](https://github.com/user-attachments/assets/78ee3efd-0cb5-4a12-8514-841a5304b90c)
+
+![Screenshot 2024-11-02 015727](https://github.com/user-attachments/assets/dd7d4f79-1658-4cd0-962b-1ededcdfa01f)
+
+## 🔧 Contributing
+
+
+- **Contributions are welcome! Feel free to open an issue or submit a pull request.**:
+  
+  - Fork the project.
+  - Create a new branch (git checkout -b feature/your-feature).
+  - Commit your changes (git commit -m 'Add new feature').
+  - Push to the branch (git push origin feature/your-feature).
+  - Open a pull request.
+
+## 📜 License
+- This project is licensed under the MIT License.
